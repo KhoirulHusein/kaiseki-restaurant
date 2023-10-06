@@ -1,0 +1,240 @@
+$clr-primary: #FFFFFF;
+$clr-blue-zodiac: #141E46;
+$clr-rose-red: #C70039;
+$clr-better-sweet: #FF6969;
+$clr-egg-sour: #FFF5E0;
+$radius: 0.5rem;
+
+:root {
+  --clr-primary: #{$clr-primary};
+  --clr-blue-zodiac: #{$clr-blue-zodiac};
+  --clr-rose-red: #{$clr-rose-red};
+  --clr-better-sweet: #{$clr-better-sweet};
+  --clr-egg-sour: #{$clr-egg-sour};
+  --radius: #{$radius};
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+  background-color: var(--clr-egg-sour);
+}
+
+.header-menu {
+  display: inline-block;
+  padding: 5px;
+  min-width: 50px;
+  min-height: 50px;
+  font-size: 32px;
+  text-decoration: none;
+}
+
+.centered {
+  display: block;
+  text-align: center;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 5rem;
+}
+
+.logo {
+  min-width: 4rem;
+  height: auto;
+  padding: 0.5rem;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+li > a {
+  padding: 0.5rem ;
+  color: var(--clr-blue-zodiac);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+li::after {
+  content: '';
+  width: 0;
+  height: 0.3rem;
+  background-color: var(--clr-rose-red);
+  display: block;
+  border-radius: var(--radius);
+  margin: 0.2rem auto 0 auto;
+  transition: width 0.3s ease-in-out;
+}
+
+li:hover::after {
+  width: 3rem;
+}
+
+/* Hero Jumbotron */
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 500px;
+  width: 100%;
+  text-align: center;
+  background-image: url('../public/images/heros/hero-image_2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: var(--clr-primary);
+}
+
+.hero-inner {
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.hero-title {
+  color: var(--clr-primary);
+  text-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+  font-weight: 800;
+  font-size: 36px;
+}
+
+.hero-tagline {
+  color: var(--clr-primary);
+  text-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Main Section */
+main > h1 {
+  margin: 4rem 0 3rem 0;
+  text-align: center;
+  color: var(--clr-blue-zodiac);
+}
+
+.content-restaurant {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.headline {
+  width: 400px;
+  height: auto;
+  position: relative;
+  background: var(--clr-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius);
+}
+
+.headline > img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.cityRender,
+.ratingRender {
+  position: absolute;
+  padding: 0.3rem;
+  text-align: center;
+  color: var(--clr-primary);
+  background-color: var(--clr-better-sweet);
+  border-radius: 0;
+}
+
+.cityRender {
+  top: 0.5rem;
+  left: 0;
+}
+
+.ratingRender {
+  top: 10rem;
+  right: 0;
+}
+
+.descriptionRender {
+  width: auto;
+  height: 6rem;
+  overflow-y: hidden;
+}
+
+.headline-content {
+  padding: 1rem;
+}
+
+.headline-story {
+  margin: 0 auto;
+  padding: 2rem;
+  width: 800px;
+  background-color: var(--clr-primary);
+  border-radius: var(--radius);
+}
+
+.content-story {
+  margin-top: 0.5rem;
+}
+
+.headline-story > p, .headline-story > h2, .headline-story > .content-story {
+  text-align: center;
+}
+
+.headline-story > p {
+  padding: 0 5rem;
+}
+
+.image-story-one {
+  width: 200px;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+.image-story-two {
+  width: 200px;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+/* Footer */
+footer h3 {
+  padding: 2rem;
+  text-align: center;
+  color: var(--clr-blue-zodiac);
+  background-color: var(--clr-egg-sour);
+}
+
+/* Skip content link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: var(--clr-better-sweet);
+  color: var(--clr-primary);
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.3s ease-in-out;
+
+  &:focus {
+    top: 0;
+  }
+}

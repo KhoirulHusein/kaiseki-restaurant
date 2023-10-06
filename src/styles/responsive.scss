@@ -1,0 +1,183 @@
+@media screen and (max-width: 499px) {
+  .navbar {
+    z-index: 10;
+    background-color: var(--clr-egg-sour);
+    width: 300px;
+    position: absolute;
+
+    transform: translateX(-300px);
+    transition: transform 0.3s ease;
+  }
+
+  .open {
+    margin: 0;
+    padding: 0;
+    transform: translateX(0);
+  }
+
+  .navbar > .navbar-nav, .nav-list {
+    display: list-item;
+    width: 100%;
+    text-align: center;
+    list-style-type: none;
+  }
+
+  .logo {
+    width: 60px;
+    height: auto;
+  }
+
+  .centered {
+    padding: 1.2rem auto;
+  }
+
+  .nav-item > a {
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 0.8rem;
+  }
+
+  .headline-story {
+    width: 90%;
+    height: auto;
+  }
+
+  .headline-story > p {
+    padding: 0 1rem;
+    font-size: 0.8rem;
+  }
+
+  .image-story-one {
+    width: 100%;
+    height: auto;
+  }
+  
+  .image-story-two {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .navbar-nav {
+    padding: 0.6rem 2rem;
+  }
+
+  ul {
+    gap: 0.5rem;
+  }
+
+  .logo {
+    width: 2rem;
+    height: auto;
+  }
+
+  .nav-item > a {
+    font-size: 1.1rem;
+    padding: 0.8rem;
+  }
+  
+  .header-menu {
+    display: none;
+  }
+
+  .headline-story {
+    width: 75%;
+    height: auto;
+  }
+
+  .headline-story > p {
+    padding: 0 1rem;
+    font-size: 0.8rem;
+  }
+
+  .image-story-one {
+    width: 150px;
+    height: auto;
+  }
+  
+  .image-story-two {
+    width: 150px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .header-menu {
+    margin: 1rem auto;
+  }
+
+  .logo {
+    max-width: 2.5rem;
+    height: auto;
+  }
+
+  .nav-item > a {
+    font-size: 1.1rem;
+    padding: 0.8rem;
+  }
+
+  .content-restaurant {
+    padding: 1rem;
+  }
+
+  .headline {
+    width: 250px;
+    height: auto;
+  }
+
+  .headline-story {
+    width: 90%;
+    height: auto;
+  }
+
+  .headline-story > p {
+    padding: 0 1rem;
+    font-size: 0.8rem;
+  }
+
+  .image-story-one {
+    width: 250px;
+    height: auto;
+  }
+  
+  .image-story-two {
+    width: 250px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .headline {
+    width:  320px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .headline {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .headline {
+    width: 300px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .headline {
+    width: 400px;
+    height: auto;
+  }
+  
+  .navbar-nav {
+    padding: 0.6rem 5rem;
+  }
+  
+  ul {
+    gap: 4rem;
+  }
+}
