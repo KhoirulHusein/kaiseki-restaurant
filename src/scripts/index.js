@@ -1,25 +1,23 @@
 import 'regenerator-runtime'; /* for async await transpile */
+import '../styles/loaders.scss';
 import '../styles/main.scss';
 import '../styles/responsive.scss';
-import dataHandler  from './dataHandler.js';
+import './utils/scroll';
+import './views/component/app-bar';
+import App from './views/app';
+import swRegister from './utils/sw-register';
 
-dataHandler();
-
-const menu = document.querySelector('#menu');
-const hero = document.querySelector('.hero');
-const main = document.querySelector('main');
-const drawer = document.querySelector('#drawer');
-
-menu.addEventListener('click', function (event) {
-  drawer.classList.toggle('open');
-  event.stopPropagation();
+const app = new App({
+  button: document.querySelector('#menu'),
+  drawer: document.querySelector('#drawer'),
+  content: document.querySelector('#maincontent'),
 });
 
-hero.addEventListener('click', function () {
-  drawer.classList.remove('open');
+window.addEventListener('hashchange', () => {
+  app.renderPage();
 });
 
-main.addEventListener('click', function () {
-  drawer.classList.remove('open');
+window.addEventListener('load', () => {
+  app.renderPage();
+  swRegister();
 });
-
